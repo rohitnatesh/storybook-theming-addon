@@ -1,0 +1,47 @@
+{
+  "name": "storybook-theming-addon",
+  "version": "0.1.0",
+  "description": "Use this Storybook add-on to customize and export theme files.",
+  "author": "FEWD",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.lbidts.com/~rnatesh/storybook-theming-addon.git"
+  },
+  "scripts": {
+    "build": "npx babel src --out-dir lib",
+    "clean": "rimraf lib",
+    "lint": "eslint --fix src/",
+    "postversion": "echo *** Log the version change in CHANGELOG.md ***",
+    "prebuild": "npm run lint && npm run clean",
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "test": "echo \"No test specified\"",
+    "precommit": "npm run lint"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@storybook/addons": "^5.3.19",
+    "@storybook/components": "^5.3.19",
+    "@storybook/core-events": "^5.3.19",
+    "prop-types": "^15.7.2"
+  }
+}
