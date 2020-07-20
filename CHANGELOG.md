@@ -11,6 +11,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Add review step before exporting the themes. 
 - Style the `Theming` panel components.
 
+## `0.2.0` - 2020 July 20
+
+### Added
+- Theming panel in storybook.
+- `.nvmrc` with Node version.
 
 ## `0.1.0` - 2020 July 19
 
@@ -19,5 +24,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - `eslint` with `eslint-config-airbnb` and `eslint-config-prettier`. 
 - Scripts: `build`, `clean`, `lint` and some others.
 - `rimraf` package to clean build files.
-- `example/` to demonstrate the package usage.
 - `README.md` and `CHANGELOG.md` files.  

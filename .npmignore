@@ -4,5 +4,7 @@ src
 .eslintrc.js
 .gitignore
 .prettierrc
+.nvmrc
 babel.config.js
 package-lock.json
+*.tgz

@@ -6,9 +6,11 @@
 
 The addon provides a `Theming` panel with fields that you can use to tweak values of the theme files in Storybook. It also provides a decorator to wrap your stories/components, enabling you to see the theme changes in real time. After making all the desired changes to the theme files, the add-on allows you to export it.
 
+
 ## Getting Started
 
 Section will be updated soon.
+
 
 ## Changelog
 

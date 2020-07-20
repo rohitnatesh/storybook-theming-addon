@@ -4,7 +4,8 @@
   "description": "Example to show the storybook-theming-addon",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "preinstall": "cd .. && npm pack && cd example"
   },
   "dependencies": {
     "react": "^16.13.1",
@@ -14,6 +15,7 @@
     "@babel/core": "^7.10.5",
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
-    "babel-loader": "^8.1.0"
+    "babel-loader": "^8.1.0",
+    "storybook-theming-addon": "../storybook-theming-addon-0.1.0.tgz"
   }
 }
