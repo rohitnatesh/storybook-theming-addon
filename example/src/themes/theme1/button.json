@@ -1,0 +1,17 @@
+{
+  "button": {
+    "borderRadius": "0",
+
+    "small": {
+      "borderWidth": "1px",
+      "fontSize": "13px",
+      "padding": "0.5rem 1.5rem"
+    },
+
+    "large": {
+      "borderWidth": "1px",
+      "fontSize": "19px",
+      "padding": "0.5rem 2rem"
+    }
+  }
+}
