@@ -1,6 +1,6 @@
 {
   "name": "storybook-theming-addon",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Use this Storybook add-on to customize and export theme files.",
   "author": "FEWD",
   "license": "UNLICENSED",
@@ -28,6 +28,7 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "babel-plugin-styled-components": "^1.10.7",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -43,6 +44,7 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/components": "^5.3.19",
     "@storybook/core-events": "^5.3.19",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "styled-components": "^5.1.1"
   }
 }

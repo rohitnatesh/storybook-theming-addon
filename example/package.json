@@ -9,13 +9,14 @@
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
-    "storybook-theming-addon": "../storybook-theming-addon-0.1.0.tgz"
+    "storybook-theming-addon": "../storybook-theming-addon-0.3.0.tgz"
   }
 }
