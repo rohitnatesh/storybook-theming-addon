@@ -18,7 +18,7 @@ const Loading = styled.div`
   width: 2.2rem;
   position: absolute;
   top: 40%;
-  left: 50%;
+  left: 48%;
 `;
 
 export default Loading;

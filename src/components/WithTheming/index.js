@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { isObjectEmpty } from '../../helper';
 import Loading from '../Loading';
+import events from '../../events';
 
 class WithTheming extends React.Component {
   constructor(props) {
@@ -13,13 +14,16 @@ class WithTheming extends React.Component {
     };
     this.isComponentMounted = false;
     this.channel = addons.getChannel();
+
+    const { allThemes } = this.props;
+
+    this.channel.on(events.REQUEST_INITIAL_THEME, () =>
+      this.channel.emit(events.INITIAL_THEME, allThemes)
+    );
   }
 
   componentDidMount() {
-    const { allThemes } = this.props;
-
     this.isComponentMounted = true;
-    console.log(allThemes);
   }
 
   componentWillUnmount() {
