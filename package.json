@@ -1,6 +1,6 @@
 {
   "name": "storybook-theming-addon",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Use this Storybook add-on to customize and export theme files.",
   "author": "FEWD",
   "license": "UNLICENSED",
@@ -14,11 +14,10 @@
     "lint": "eslint --fix src/",
     "postversion": "echo \"*** Log the version change in CHANGELOG.md ***\"",
     "prebuild": "npm run lint && npm run clean",
-    "prepare": "npm run build",
     "preversion": "npm run lint",
     "test": "echo \"No test specified\"",
     "precommit": "npm run lint",
-    "prepack": "rimraf *.tgz"
+    "prepack": "rimraf *.tgz && npm run build"
   },
   "peerDependencies": {
     "react": "*"
