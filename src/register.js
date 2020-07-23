@@ -7,6 +7,7 @@ addons.register('storybook-theming-addon', (api) => {
   addons.add('storybook-theming-addon/panel', {
     title: 'Theming',
     type: types.PANEL,
+    // eslint-disable-next-line react/prop-types
     render: ({ active, key }) => (
       <AddonPanel active={active} key={key}>
         <ThemingPanel api={api} />
