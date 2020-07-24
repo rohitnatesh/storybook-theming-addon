@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "description": "Example to show the storybook-theming-addon",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "preinstall": "rm package-lock.json || : && rm -r node_modules/storybook-theming-addon || :",
+    "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
     "react": "^16.13.1",
@@ -16,6 +17,6 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
-    "storybook-theming-addon": "../storybook-theming-addon-0.4.0.tgz"
+    "storybook-theming-addon": "../storybook-theming-addon-0.5.0.tgz"
   }
 }

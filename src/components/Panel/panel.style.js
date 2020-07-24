@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledThemingPanel = styled.section`
+export const StyledPanel = styled.section`
   margin: 1rem;
 `;
 

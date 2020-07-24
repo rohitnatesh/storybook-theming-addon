@@ -1,9 +1,9 @@
 import { addons } from '@storybook/addons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import events from '../../events';
 import { isObjectEmpty } from '../../helper';
 import Loading from '../Loading';
-import events from '../../events';
 
 class WithTheming extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class WithTheming extends React.Component {
     this.state = {
       activeTheme: {},
     };
-    this.isComponentMounted = false;
+    this.mounted = false;
     this.channel = addons.getChannel();
 
     const { allThemes } = this.props;
@@ -23,11 +23,19 @@ class WithTheming extends React.Component {
   }
 
   componentDidMount() {
-    this.isComponentMounted = true;
+    this.channel.on(events.UPDATE_THEME, (payload) => {
+      if (this.mounted) this.setState({ activeTheme: { ...payload } });
+    });
+    this.mounted = true;
+    this.channel.emit(events.DECORATOR_MOUNTED);
   }
 
   componentWillUnmount() {
-    this.isComponentMounted = false;
+    this.channel.emit(events.DECORATOR_UNMOUNTED);
+    this.mounted = false;
+    this.channel.removeListener(events.UPDATE_THEME, (payload) => {
+      if (this.mounted) this.setState({ activeTheme: { ...payload } });
+    });
   }
 
   render() {

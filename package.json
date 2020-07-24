@@ -1,6 +1,6 @@
 {
   "name": "storybook-theming-addon",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Use this Storybook add-on to customize and export theme files.",
   "author": "FEWD",
   "license": "UNLICENSED",
@@ -10,14 +10,14 @@
   },
   "scripts": {
     "build": "npx babel src --out-dir lib",
-    "clean": "rimraf lib",
+    "clean": "rm -r lib || :",
     "lint": "eslint --fix src/",
     "postversion": "echo \"*** Log the version change in CHANGELOG.md ***\"",
     "prebuild": "npm run lint && npm run clean",
     "preversion": "npm run lint",
     "test": "echo \"No test specified\"",
     "precommit": "npm run lint",
-    "prepack": "rimraf *.tgz && npm run build"
+    "prepack": "rm *.tgz || : && npm run build"
   },
   "peerDependencies": {
     "react": "*"
@@ -27,6 +27,7 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "acorn": "^7.3.1",
     "babel-plugin-styled-components": "^1.10.7",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -36,13 +37,13 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.8",
-    "prettier": "^2.0.5",
-    "rimraf": "^3.0.2"
+    "prettier": "^2.0.5"
   },
   "dependencies": {
     "@storybook/addons": "^5.3.19",
     "@storybook/components": "^5.3.19",
     "@storybook/core-events": "^5.3.19",
+    "lodash.debounce": "^4.0.8",
     "prop-types": "^15.7.2",
     "styled-components": "^5.1.1"
   }
