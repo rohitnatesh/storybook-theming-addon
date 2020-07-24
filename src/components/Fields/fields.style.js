@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const StyledThemingFields = styled.div`
+const StyledFields = styled.div`
   border: 1px dashed #000000;
   margin: 1.5rem 0;
   padding: 0 0 0.5rem 1rem;
 `;
 
-export default StyledThemingFields;
+export default StyledFields;

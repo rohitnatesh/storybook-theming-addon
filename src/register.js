@@ -1,7 +1,7 @@
 import { addons, types } from '@storybook/addons';
 import { AddonPanel } from '@storybook/components';
 import React from 'react';
-import ThemingPanel from './components/ThemingPanel';
+import Panel from './components/Panel';
 
 addons.register('storybook-theming-addon', (api) => {
   addons.add('storybook-theming-addon/panel', {
@@ -10,7 +10,7 @@ addons.register('storybook-theming-addon', (api) => {
     // eslint-disable-next-line react/prop-types
     render: ({ active, key }) => (
       <AddonPanel active={active} key={key}>
-        <ThemingPanel api={api} />
+        <Panel api={api} />
       </AddonPanel>
     ),
   });

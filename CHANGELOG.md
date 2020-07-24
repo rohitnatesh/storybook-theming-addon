@@ -13,6 +13,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Migrate state in Panel to Context.
 - Style the panel components.
 
+## `0.5.0` - 2020 July 24
+
+- Stories updated based on changes in panel.
+- Added `DECORATOR_MOUNTED`, `DECORATOR_UNMOUNTED` and `UPDATE_THEME` events in `events.js`.
+- Installed `lodash.debounce` package.
+- Changed `ThemingFields` component to `Fields`.
+- Changed `ThemingPanel` component to `Panel`.
+- Removed `rimraf` package.
+
 ## `0.4.0` - 2020 July 23
 
 - Panel generates input fields based on the theme files obtained.

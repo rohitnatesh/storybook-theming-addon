@@ -4,9 +4,9 @@ import FormGroup from '../FormGroup';
 import Heading from '../Heading';
 import Label from '../Label';
 import TextInput from '../TextInput';
-import StyledThemingFields from './ThemingFields.style';
+import StyledFields from './fields.style';
 
-const ThemingFields = (props) => {
+const Fields = (props) => {
   const { theme, updateTheme } = props;
 
   const generateInnerFields = (parent, data) => (
@@ -36,18 +36,18 @@ const ThemingFields = (props) => {
   return (
     <div>
       {Object.entries(theme).map(([key, value]) => (
-        <StyledThemingFields key={`field-group-${key}`}>
+        <StyledFields key={`field-group-${key}`}>
           <Heading>{key}</Heading>
           <div>{generateInnerFields(key, value)}</div>
-        </StyledThemingFields>
+        </StyledFields>
       ))}
     </div>
   );
 };
 
-ThemingFields.propTypes = {
+Fields.propTypes = {
   theme: PropTypes.oneOfType([PropTypes.object]).isRequired,
   updateTheme: PropTypes.func.isRequired,
 };
 
-export default ThemingFields;
+export default Fields;
