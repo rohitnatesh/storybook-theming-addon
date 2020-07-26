@@ -4,7 +4,7 @@ import FormGroup from '../FormGroup';
 import Heading from '../Heading';
 import Label from '../Label';
 import TextInput from '../TextInput';
-import StyledBox from './style';
+import StyledBox, { StyledInputWrapper } from './style';
 
 const ThemeFields = (props) => {
   const { theme, updateTheme } = props;
@@ -16,11 +16,13 @@ const ThemeFields = (props) => {
           {typeof value === 'string' ? (
             <>
               <Label htmlFor={`${parent}_${key}`}>{key}</Label>
-              <TextInput
-                id={`${parent}_${key}`}
-                value={value}
-                onChange={(e) => updateTheme(e.target.id, e.target.value)}
-              />
+              <StyledInputWrapper>
+                <TextInput
+                  id={`${parent}_${key}`}
+                  value={value}
+                  onChange={(e) => updateTheme(e.target.id, e.target.value)}
+                />
+              </StyledInputWrapper>
             </>
           ) : (
             <>

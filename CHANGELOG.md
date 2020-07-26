@@ -6,9 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## `Unreleased`
 
-- Add functionality to export the tweaked theme files.
+- Add functionality to copy theme to clipboard.
 - Add reset functionality to revert changes.
 - Migrate state in Panel to Context.
+
+## `0.7.0` - 2020 July 27
+
+- Added functionality to export changed theme files.
+- Added `Export` component.
 
 ## `0.6.0` - 2020 July 26
 
