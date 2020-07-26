@@ -6,4 +6,12 @@ const StyledBox = styled.div`
   padding: 0 0 0.5rem 1rem;
 `;
 
+export const StyledInputWrapper = styled.div`
+  margin-right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  right: 0;
+`;
+
 export default StyledBox;

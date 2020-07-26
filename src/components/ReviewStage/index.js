@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../Button';
 import CodePreview from '../CodePreview';
+import Export from '../ExportComponent';
 import Heading from '../Heading';
 import StyledDiv, { StyledButtonWrapper } from './style';
 
@@ -19,6 +20,9 @@ const ReviewStage = (props) => {
         <Heading>Review changes</Heading>
       </StyledDiv>
       <CodePreview newTheme={newTheme} oldTheme={oldTheme} />
+      <StyledDiv>
+        <Export theme={newTheme} />
+      </StyledDiv>
     </div>
   );
 };
