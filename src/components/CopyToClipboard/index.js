@@ -18,13 +18,22 @@ const CopyToClipboard = (props) => {
 
   const copyToClipboard = () =>
     // eslint-disable-next-line no-undef
-    navigator.clipboard.writeText(content).then(updateIsCopied);
+    window.navigator.clipboard.writeText(content).then(updateIsCopied);
 
   return (
-    <StyledClipboardButton onClick={copyToClipboard}>
-      <StyledClipboardIcon />
-      {isCopied && <StyledCopyMessage>Copied!</StyledCopyMessage>}
-    </StyledClipboardButton>
+    <>
+      {
+        // eslint-disable-next-line no-undef
+        window.navigator.clipboard ? (
+          <StyledClipboardButton onClick={copyToClipboard}>
+            <StyledClipboardIcon />
+            {isCopied && <StyledCopyMessage>Copied!</StyledCopyMessage>}
+          </StyledClipboardButton>
+        ) : (
+          <></>
+        )
+      }
+    </>
   );
 };
 
