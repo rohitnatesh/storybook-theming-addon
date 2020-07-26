@@ -1,6 +1,6 @@
 {
   "name": "storybook-theming-addon",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Use this Storybook add-on to customize and export theme files.",
   "author": "FEWD",
   "license": "UNLICENSED",
@@ -17,7 +17,8 @@
     "preversion": "npm run lint",
     "test": "echo \"No test specified\"",
     "precommit": "npm run lint",
-    "prepack": "rm *.tgz || : && npm run build"
+    "prepack": "rm *.tgz || : && npm run build",
+    "example": "npm pack && cd example && npm i && npm run storybook && cd .."
   },
   "peerDependencies": {
     "react": "*"

@@ -6,19 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## `Unreleased`
 
-- Add communication between decorator and panel.
-- Add components and logic to allow tweaking of theme.
 - Add functionality to export the tweaked theme files.
-- Add review step before exporting the themes.
+- Add reset functionality to revert changes.
 - Migrate state in Panel to Context.
-- Style the panel components.
+
+## `0.6.0` - 2020 July 26
+
+- Added functionality to review changes made.
+- Added `Button`, `CodePreview`, `PlaygroundStage`, `ReviewStage`,
+- Added wrapper around panel with ref to control scrolling.
+- Added `example` script to run the example directly.
 
 ## `0.5.0` - 2020 July 24
 
 - Stories updated based on changes in panel.
 - Added `DECORATOR_MOUNTED`, `DECORATOR_UNMOUNTED` and `UPDATE_THEME` events in `events.js`.
 - Installed `lodash.debounce` package.
-- Changed `ThemingFields` component to `Fields`.
+- Changed `ThemingFields` component to `ThemeFields`.
 - Changed `ThemingPanel` component to `Panel`.
 - Removed `rimraf` package.
 

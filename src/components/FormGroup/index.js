@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import StyledFormGroup from './formGroup.style';
+import StyledFormGroup from './style';
 
 const FormGroup = (props) => {
   const { index, children, ...rest } = props;

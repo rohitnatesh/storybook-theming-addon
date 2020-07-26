@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import StyledLabel from './label.style';
+import StyledLabel from './style';
 
 const Label = (props) => {
   const { htmlFor, isRoot, children, ...rest } = props;
