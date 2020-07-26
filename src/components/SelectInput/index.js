@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import StyledSelectInput, {
-  StyledSelectInputContainer,
-  StyledCaret,
-} from './selectInput.style';
+import StyledSelectInput, { StyledCaret, StyledSelectInputContainer } from './style';
 
 const SelectInput = (props) => {
   const { onChange, value, ...rest } = props;

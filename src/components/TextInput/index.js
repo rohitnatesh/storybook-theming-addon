@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import StyledTextInput from './textInput.style';
+import StyledTextInput from './style';
 
 const TextInput = (props) => {
   const { id, onChange, value, ...rest } = props;
