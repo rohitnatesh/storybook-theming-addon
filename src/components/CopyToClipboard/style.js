@@ -29,3 +29,14 @@ export const StyledCopyMessage = styled.span`
   left: 100%;
   transform: translateY(-50%);
 `;
+
+export const StyledHiddenTextArea = styled.textarea`
+  max-height: 1px;
+  max-width: 1px;
+  outline: none;
+  color: transparent;
+  border: none;
+  position: absolute;
+  resize: none;
+  pointer-events: none;
+`;

@@ -1,13 +1,17 @@
+/* eslint-disable no-undef */
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   StyledClipboardButton,
   StyledClipboardIcon,
   StyledCopyMessage,
+  StyledHiddenTextArea,
 } from './style';
 
 const CopyToClipboard = (props) => {
   const { content } = props;
+
+  const textareaRef = useRef(null);
 
   const [isCopied, setIsCopied] = useState(false);
 
@@ -16,23 +20,30 @@ const CopyToClipboard = (props) => {
     setTimeout(() => setIsCopied(false), 1500);
   };
 
-  const copyToClipboard = () =>
-    // eslint-disable-next-line no-undef
-    window.navigator.clipboard.writeText(content).then(updateIsCopied);
+  const copyToClipboard = () => {
+    if (navigator.clipboard)
+      navigator.clipboard.writeText(content).then(updateIsCopied);
+    else {
+      textareaRef.current.value = content;
+      textareaRef.current.select();
+      document.execCommand('copy');
+      updateIsCopied();
+    }
+  };
 
   return (
     <>
-      {
-        // eslint-disable-next-line no-undef
-        window.navigator.clipboard ? (
+      {navigator.clipboard || document.execCommand ? (
+        <>
           <StyledClipboardButton onClick={copyToClipboard}>
             <StyledClipboardIcon />
             {isCopied && <StyledCopyMessage>Copied!</StyledCopyMessage>}
           </StyledClipboardButton>
-        ) : (
-          <></>
-        )
-      }
+          {!navigator.clipboard && <StyledHiddenTextArea ref={textareaRef} />}
+        </>
+      ) : (
+        <></>
+      )}
     </>
   );
 };
