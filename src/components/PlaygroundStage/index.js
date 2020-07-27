@@ -24,7 +24,9 @@ const PlaygroudStage = (props) => {
           onChange={(e) => changeActiveTheme(e.target.value)}
         >
           {Object.keys(themes).map((item) => (
-            <option key={`opt-${item}`}>{item}</option>
+            <option value={item} key={`opt-${item}`}>
+              {item}
+            </option>
           ))}
         </SelectInput>
       </StyledDiv>

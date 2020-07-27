@@ -4,7 +4,13 @@ import React, { useState } from 'react';
 import Button from '../Button';
 import Label from '../Label';
 import TextInput from '../TextInput';
-import StyledDiv, { StyledSpan } from './style';
+import {
+  StyledDiv,
+  StyledRelativeDiv,
+  StyledSpan,
+  StyledClipboardWrapper,
+} from './style';
+import CopyToClipboard from '../CopyToClipboard';
 
 const Export = (props) => {
   const { theme } = props;
@@ -70,7 +76,13 @@ const Export = (props) => {
           value={themeName}
         />
       </StyledDiv>
-      <Button onClick={() => generateZip(theme)}>Export</Button>
+      <StyledRelativeDiv>
+        <Button onClick={() => generateZip(theme)}>Export</Button>
+        <StyledClipboardWrapper>
+          <CopyToClipboard content={JSON.stringify(theme)} />
+        </StyledClipboardWrapper>
+      </StyledRelativeDiv>
+
       {exportError && <StyledSpan>Ops! Some error occurred.</StyledSpan>}
     </>
   );

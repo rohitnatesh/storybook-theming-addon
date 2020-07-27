@@ -17,6 +17,6 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
-    "storybook-theming-addon": "../storybook-theming-addon-0.7.0.tgz"
+    "storybook-theming-addon": "../storybook-theming-addon-0.7.1.tgz"
   }
 }

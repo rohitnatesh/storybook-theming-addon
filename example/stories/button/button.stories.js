@@ -1,7 +1,5 @@
 import React from 'react';
 import Button from '../../src/button';
-import { ThemeProvider } from 'styled-components';
-import { theme2 } from '../../src/themes';
 
 export default {
   component: Button,
